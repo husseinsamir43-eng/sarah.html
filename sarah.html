@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Welcome, Sarah!</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="A small welcome page made for Sarah with a link to a song." />
+</head>
+<body>
+  <main class="card">
+    <h1>Welcome, Sarah!</h1>
+    <p class="lead">Hi Sarah — this page is made just for you. Enjoy a friendly greeting and a song from your friend hussein btw he think you are pretty and kind .</p>
+
+    <div class="actions">
+      <a class="btn" id="openSong" href="https://www.youtube.com/watch?v=s0MoBvqVqhA" target="_blank" rel="noopener">Open the song (YouTube)</a>
+      <button class="btn secondary" id="focusAudio">Play sample here</button>
+    </div>
+
+
+    <footer>Made with ❤️ for Sarah</footer>
+  </main>
+
+  <script>
+    // Small nicety: focus the audio player when button is clicked
+    document.getElementById('focusAudio').addEventListener('click', function(){
+      const a=document.getElementById('inlineAudio');
+      a.play().catch(()=>{});
+      a.focus();
+    });
+  </script>
+</body>
+</html>
